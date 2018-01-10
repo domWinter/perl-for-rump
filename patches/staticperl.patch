@@ -1,0 +1,14 @@
+--- staticperl-old/bin/staticperl	2015-07-06 23:33:04.000000000 +0000
++++ build/bin/staticperl     	2017-11-20 12:14:14.650675969 +0000
+@@ -10,9 +10,9 @@
+
+ # perl build variables
+ MAKE=make
+-PERL_VERSION=5.12.4 # 5.8.9 is also a good choice
++PERL_VERSION=5.26.1 # 5.8.9 is also a good choice
+ PERL_CC=cc
+-PERL_CONFIGURE="" # additional Configure arguments
++PERL_CONFIGURE="-Ud_syscall -Ud_syscallproto -Ud_msgget -Ud_msg -Ud_sem -Ud_semget -Ud_shm -Ud_shmget -Ud_msgctl -Ud_semop -Ud_shmdt -Ud_shmat" # additional Configure arguments
+ PERL_CCFLAGS="-g -DPERL_DISABLE_PMC -DPERL_ARENA_SIZE=16376 -DNO_PERL_MALLOC_ENV -D_GNU_SOURCE -DNDEBUG"
+ PERL_OPTIMIZE="-Os" # -Os -ffunction-sections -fdata-sections -finline-limit=8 -ffast-math"
+

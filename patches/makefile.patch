@@ -1,0 +1,13 @@
+--- /root/.staticperl/src/perl-5.26.1/Makefile_old	2017-11-20 14:44:31.000000000 +0000
++++ ~/.staticperl/src/perl-5.26.1/Makefile	2017-11-20 14:45:07.000000000 +0000
+@@ -7,8 +7,8 @@
+ CC = cc
+ LD = ld
+ 
+-LDFLAGS =  -Wl,-rpath,/usr/pkg/lib -Wl,-rpath,/usr/local/lib -L/usr/pkg/lib
+-CLDFLAGS =  -Wl,-rpath,/usr/pkg/lib -Wl,-rpath,/usr/local/lib -L/usr/pkg/lib
++LDFLAGS =  -static -static-libgcc
++CLDFLAGS =  -static -static-libgcc
+ 
+ mallocsrc = 
+ mallocobj = 
