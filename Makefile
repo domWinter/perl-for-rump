@@ -34,6 +34,6 @@ bake_binary:
 	~/build/rumprun/rumprun/bin/rumprun-bake hw_generic perl.bin perl
 
 clean:
-	rm -r build
-	rm -r ~/.staticperl
+	rm -rf build
+	rm -rf ~/.staticperl
 	rm perl*
