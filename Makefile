@@ -36,4 +36,4 @@ bake_binary:
 clean:
 	rm -rf build
 	rm -rf ~/.staticperl
-	rm perl*
+	rm -rf perl*
