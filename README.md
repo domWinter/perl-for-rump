@@ -43,7 +43,7 @@ Examples
 You are now ready to run the Perl example. To run the rumpkernel using KVM, the following will work:
 
 ```
-rumprun kvm -i -- perl.bin -e "print "Hello World!\n";"
+rumprun kvm -i -- perl.bin -e 'print "Hello World!\n";'
 ```
 
 You will have to replace `kvm` with `xen` to run under Xen.
