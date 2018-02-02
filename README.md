@@ -24,7 +24,7 @@ compiling step.
 Instructions
 ============
 
-Run this `make` from a root account on a NetBSD 7.1 host in home. 
+Run `make` from a root account on a NetBSD 7.1 host in `/root/perl-for-rump`. 
 
 The build script requires `git`,  `wget` and `gmake` to create the perl supporting
 rump unikernel binary.
