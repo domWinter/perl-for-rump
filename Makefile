@@ -1,7 +1,7 @@
-UPSTREAM=http://search.cpan.org/CPAN/authors/id/M/ML/MLEHMANN/App-Staticperl-1.44.tar.gz
-wget=http://ftp.netbsd.org/pub/pkgsrc/packages/NetBSD/amd64/7.1/All/wget-1.19.1nb2.tgz
-git=http://ftp.netbsd.org/pub/pkgsrc/packages/NetBSD/amd64/7.1/All/git-2.14.3.tgz
-gmake=http://ftp.netbsd.org/pub/pkgsrc/packages/NetBSD/amd64/7.1/All/gmake-4.1nb3.tgz
+UPSTREAM=https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/App-Staticperl-1.44.tar.gz
+wget=http://ftp.netbsd.org/pub/pkgsrc/packages/NetBSD/amd64/7.1/All/wget-1.19.5.tgz
+git=http://ftp.netbsd.org/pub/pkgsrc/packages/NetBSD/amd64/7.1/All/git-2.18.0.tgz
+gmake=http://ftp.netbsd.org/pub/pkgsrc/packages/NetBSD/amd64/7.1/All/gmake-4.1nb4.tgz
 
 .PHONY: all
 all: install_packages build_staticperl build_rumprun build_perl bake_binary 
@@ -15,7 +15,7 @@ install_packages:
 .PHONY: build_staticperl
 build_staticperl:
 	mkdir -p build
-	wget -O build/staticperl.tar.gz $(UPSTREAM)
+	wget --no-check-certificate -O build/staticperl.tar.gz $(UPSTREAM)
 	(cd build && tar -xzvf staticperl.tar.gz)
 	(cd build && mv App-Staticperl-1.44/* ./ && rm -r App-Staticperl-1.44)
 	patch ./build/bin/staticperl < ./patches/staticperl.patch  
